@@ -1,0 +1,45 @@
+@import "Parts/variables"
+@import 'https://fonts.googleapis.com/css?family=Cairo|Mirza|Scheherazade'
+
+body
+  background-color: $body_back
+  height: 70%
+
+@import "Parts/nave_bare"
+@import "Parts/side_bare"
+
+
+.hide_side
+  right: -$side_Bare_Width !important
+  transition: right .6s ease
+.show_side
+  right: 0 !important
+  transition: right .6s ease
+
+.min_nav
+  padding-right: $side_Bare_Width
+  transition: padding-right .6s ease
+  .menu_button
+    background-color: $header_color_hover
+    i
+      color: $Header_fonts_color_hover
+
+.full_nav
+  padding-right: 0
+  transition: padding-right .6s ease
+
+.vertical-center
+  min-height: 100%
+  display: -webkit-flex
+  display: flex
+
+._transparent
+  background-color: transparent !important
+  border: none !important
+  outline: none
+
+
+/*BootStrap elimination*/
+._paddingLeft_right
+  padding-left: 0
+  padding-right: 0

@@ -1,0 +1,53 @@
+.Header_nav
+  position: absolute
+  top: 0
+  height: $Header_Height
+  background-color: $element_back
+  width: 100%
+
+  .right_area
+    .right_ele
+      display: flex
+      width: 100%
+      .menu_button
+        &:hover
+          background-color: $header_color_hover
+          i
+            color: $Header_fonts_color_hover
+        width: 82px
+        border-left: 1px solid $Header_border_color
+        button
+          width: 82px
+
+  .left_area
+    position: relative
+    .button_setting
+      &:hover
+        background-color: $header_color_hover
+        i
+          color: $Header_fonts_color_hover
+
+
+  i
+    font-size: $Header_font_size
+    color: $Header_fonts_color
+
+  input
+    font-size: $Header_font_size
+    font-family: serif
+    color: $Header_fonts_color
+
+  .button_setting
+    width: $Header_Height
+    button
+      border-right: 1px solid $Header_border_color
+      width: 100%
+
+  .to_left
+    float: left
+    top: 0
+    bottom: 0
+    position: absolute
+    left: 0
+    display: flex
+

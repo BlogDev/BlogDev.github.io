@@ -1,0 +1,90 @@
+
+.Side_nave
+  width: $side_Bare_Width
+  position: absolute
+  background: $Side_Bare_back_color
+  right: 0
+  top: 0
+  bottom: 0
+
+  .Header_Side
+    padding-bottom: 20px
+    .user_pic
+      position: relative
+      height: $Side_Bare_header_height - $user_pic_mah_width_and_height + 30px
+      img
+        margin: auto
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        max-width: $user_pic_mah_width_and_height
+        min-width: $user_pic_mah_width_and_height
+        max-height: $user_pic_mah_width_and_height
+        min-height: $user_pic_mah_width_and_height
+        border-radius: $user_pic_border_radius
+    .user_info
+      margin-top: -10px
+      font-size: 16px
+      font-weight: 600
+      color : $Side_Bare_font_color
+      text-align: center
+
+  .Main_Said
+    margin-top: 20px
+    padding-bottom: 20px
+    .category_name
+      color: $Side_Bare_font_color_category
+      font-size: $label_font_size
+      font-family: $Side_Bare_font_family
+      padding-right: $category_padding_right
+      margin: 5px 0 16px 0
+      font-weight: 600
+      cursor: context-menu
+    .Label_Group
+      display: flex
+      height: $label_height
+      cursor: pointer
+      .Label_Icon
+        height: $label_icon_width_and_height
+        width: $label_icon_width_and_height
+        margin-right: 25px
+        margin-top: ($label_height - $label_icon_width_and_height) / 2
+        i
+          font-size: $label_icon_width_and_height
+          color: $Side_Bare_font_color
+      .Label_Name
+        color: $Side_Bare_font_color
+        font-size: $label_font_size
+        font-family: $Side_Bare_font_family
+        font-weight: 600
+        height: 24px
+        margin-right: 10px
+        margin-top: ($label_height - $label_icon_width_and_height) / 2
+      &:hover
+        border-right: 5px solid #15a4fa
+        background-color: #303949
+        .Label_Icon
+          i
+            color: #ffffff
+        .Label_Name
+          color: #ffffff
+
+  .border
+    .top
+      width: 100%
+      height: 2px
+      background-color: #293241
+    .midle
+      width: 100%
+      height: 2px
+      background-color: #303a4a
+    .buttom
+      width: 100%
+      height: 2px
+      background-color: #293241
+    .light
+      width: 100%
+      height: 2px
+      background-color: #3d495d
