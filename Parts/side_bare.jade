@@ -9,7 +9,12 @@ mixin Border
     .Header_Side
         .user_pic
             img(src="images/avatars/av2.png")
-        .user_info Makaoui Charif
+        .user_info.dropdown
+            span.dropbtn Makaoui Charif
+            div.dropdown-content
+                a(href="#") Link 1
+                a(href="#") Link 2
+                a(href="#") Link 3
     +Border
     .Main_Said
         .category_name الرئيسية

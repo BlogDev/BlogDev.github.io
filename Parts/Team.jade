@@ -1,0 +1,17 @@
+div.TeamArea.Test
+    div.Header.row.vertical-center
+        div.col-md-9.Title_Area فريق العمل
+        div.col-md-3.Navigation.row
+            div.Reduire.col-md-6
+                i(class="fa fa-minus" aria-hidden="true")
+            div.Exit.col-md-6
+                i(class="fa fa-times" aria-hidden="true")
+
+    div.Body
+        -for( var x = 0 ; x < 3; x++)
+            div.Item_Team.row
+                div.user_pic.col-md-3
+                    img(src='images/avatars/av1.png' alt='tt')
+                div.user_info.col-md-9
+                    h3.user_name Rida Dahhane
+                    span.user_role UI/UX Designer

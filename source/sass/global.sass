@@ -1,4 +1,5 @@
 @import "Parts/variables"
+@import "Parts/libs"
 @import 'https://fonts.googleapis.com/css?family=Cairo|Mirza|Scheherazade'
 
 body
@@ -7,7 +8,11 @@ body
 
 @import "Parts/nave_bare"
 @import "Parts/side_bare"
+@import "Parts/team_area"
 
+
+.content
+  margin-top: 80px
 
 .hide_side
   right: -$side_Bare_Width !important
@@ -27,6 +32,15 @@ body
 .full_nav
   padding-right: 0
   transition: padding-right .6s ease
+
+.min_content
+  padding-right: $side_Bare_Width
+  transition: padding-right .6s ease
+.full_content
+  padding-right: 0
+  transition: padding-right .6s ease
+
+
 
 .vertical-center
   min-height: 100%

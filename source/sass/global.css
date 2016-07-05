@@ -1,4 +1,30 @@
 @import 'https://fonts.googleapis.com/css?family=Cairo|Mirza|Scheherazade';
+.dropbtn {
+  cursor: pointer; }
+
+.dropdown {
+  position: relative;
+  display: inline-block; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  max-width: 160px; }
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
 body {
   background-color: #ecf2f6;
   height: 70%; }
@@ -76,7 +102,8 @@ body {
       font-size: 16px;
       font-weight: 600;
       color: #a0acbf;
-      text-align: center; }
+      text-align: center;
+      width: 100%; }
   .Side_nave .Main_Said {
     margin-top: 20px;
     padding-bottom: 20px; }
@@ -132,6 +159,50 @@ body {
     height: 2px;
     background-color: #3d495d; }
 
+.TeamArea {
+  width: 300px;
+  background-color: #ffffff; }
+  .TeamArea .Header {
+    margin: 0 0;
+    height: 50px;
+    border-bottom: 2px solid #e1e7f0; }
+    .TeamArea .Header .Navigation {
+      margin: 0 0;
+      padding: 12px 0 0;
+      color: #c4c5d4; }
+    .TeamArea .Header .Title_Area {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 20px 0 0;
+      color: #515974; }
+  .TeamArea .Body .Item_Team {
+    height: 80px;
+    margin: 0 0;
+    cursor: pointer; }
+    .TeamArea .Body .Item_Team .user_pic {
+      margin-top: 15px; }
+      .TeamArea .Body .Item_Team .user_pic img {
+        max-height: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        min-width: 50px;
+        border-radius: 50%; }
+    .TeamArea .Body .Item_Team .user_info {
+      margin-top: 22px; }
+      .TeamArea .Body .Item_Team .user_info .user_name {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #515974; }
+      .TeamArea .Body .Item_Team .user_info .user_role {
+        font-size: 14px;
+        font-weight: 100;
+        color: #c3c5d4; }
+
+.content {
+  margin-top: 80px; }
+
 .hide_side {
   right: -200px !important;
   transition: right 0.6s ease; }
@@ -149,6 +220,14 @@ body {
       color: #ffffff; }
 
 .full_nav {
+  padding-right: 0;
+  transition: padding-right 0.6s ease; }
+
+.min_content {
+  padding-right: 200px;
+  transition: padding-right 0.6s ease; }
+
+.full_content {
   padding-right: 0;
   transition: padding-right 0.6s ease; }
 
