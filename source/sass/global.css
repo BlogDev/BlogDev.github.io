@@ -179,6 +179,8 @@ body {
     height: 80px;
     margin: 0 0;
     cursor: pointer; }
+    .TeamArea .Body .Item_Team:hover {
+      background-color: rgba(196, 197, 212, 0.2); }
     .TeamArea .Body .Item_Team .user_pic {
       margin-top: 15px; }
       .TeamArea .Body .Item_Team .user_pic img {
