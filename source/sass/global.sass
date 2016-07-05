@@ -4,15 +4,16 @@
 
 body
   background-color: $body_back
-  height: 70%
 
 @import "Parts/nave_bare"
 @import "Parts/side_bare"
 @import "Parts/team_area"
+@import "Parts/users_table"
 
 
 .content
   margin-top: 80px
+  padding: 15px
 
 .hide_side
   right: -$side_Bare_Width !important
@@ -34,10 +35,10 @@ body
   transition: padding-right .6s ease
 
 .min_content
-  padding-right: $side_Bare_Width
+  padding-right: $side_Bare_Width + 15px
   transition: padding-right .6s ease
 .full_content
-  padding-right: 0
+  padding-right: 15px
   transition: padding-right .6s ease
 
 
