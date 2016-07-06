@@ -7,23 +7,23 @@ div._card
             div.button.Exit
                 i(class="fa fa-times" aria-hidden="true")
     div.Body
-
-        table.table.table-bordered.table-hover.table_users
-            thead
-                tr
-                each val in ['#','', 'إسم المستخدم', 'البريد', 'الإسم الشخصي', 'التحكم']
-                    th= val
-            tbody
-                -for(var i = 0; i<5 ; i++)
+        div.table-responsive
+            table.table.table-bordered.table-hover.table_users
+                thead
                     tr
-                        th=i
-                        th.user_image
-                            img(src="images/avatars/av1.png" height='25px' width='25px')
-                        th MrCharif
-                        th mrcharifmakaoui@gmail.com
-                        th Charif Makaoui
-                        th
-                            div.btn-group.btn-group-sm(role="group")
-                                button.btn.btn-success التعديل
-                                button.btn.btn-warning حظر
-                                button.btn.btn-danger حذف
+                    each val in ['#','', 'إسم المستخدم', 'البريد', 'الإسم الشخصي', 'التحكم']
+                        th= val
+                tbody
+                    -for(var i = 0; i<5 ; i++)
+                        tr
+                            th=i
+                            th.user_image
+                                img(src="images/avatars/av1.png" height='25px' width='25px')
+                            th MrCharif
+                            th mrcharifmakaoui@gmail.com
+                            th Charif Makaoui
+                            th
+                                div.btns_control.btn-group.btn-group-sm(role="group")
+                                    button.btn.btn-success التعديل
+                                    button.btn.btn-warning حظر
+                                    button.btn.btn-danger حذف

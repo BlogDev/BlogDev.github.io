@@ -254,7 +254,8 @@ body {
   height: 50px; }
 .table_users .user_image {
   position: relative;
-  width: 50px; }
+  width: 50px;
+  min-width: 50px; }
   .table_users .user_image img {
     height: 36px;
     width: 36px;
@@ -265,6 +266,8 @@ body {
     bottom: 0;
     left: 0;
     right: 7px; }
+.table_users .btns_control {
+  min-width: 128px; }
 
 .content {
   margin-top: 80px;
