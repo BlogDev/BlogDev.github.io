@@ -1,2 +1,10 @@
 .idea
-*.css.map
+*.map
+/source/sass/Parts/*.css
+/Parts/*.html
+
+# Folders to ignore
+node_modules
+bower_components
+
+

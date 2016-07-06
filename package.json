@@ -1,0 +1,11 @@
+{
+  "name": "aqua-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Aqua DEV",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}

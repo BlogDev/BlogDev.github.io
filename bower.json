@@ -1,0 +1,21 @@
+{
+  "name": "aqua-dev",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "private": true,
+  "author": "Aqua DEV",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "bootstrap-material-design": "^0.5.10",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-rtl": "^3.4.0"
+  }
+}
