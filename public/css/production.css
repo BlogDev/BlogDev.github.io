@@ -1,0 +1,397 @@
+@import 'https://fonts.googleapis.com/css?family=Cairo|Mirza|Scheherazade';
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+  max-width: 160px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+body {
+  background-color: #ecf2f6;
+}
+
+.Header_nav {
+  position: absolute;
+  top: 0;
+  height: 82px;
+  background-color: #ffffff;
+  width: 100%;
+}
+.Header_nav .right_area .right_ele {
+  display: flex;
+  width: 100%;
+}
+.Header_nav .right_area .right_ele .menu_button {
+  width: 82px;
+  border-left: 1px solid #eeeff3;
+}
+.Header_nav .right_area .right_ele .menu_button:hover {
+  background-color: #15a4fa;
+}
+.Header_nav .right_area .right_ele .menu_button:hover i {
+  color: #ffffff;
+}
+.Header_nav .right_area .right_ele .menu_button button {
+  width: 82px;
+}
+.Header_nav .left_area {
+  position: relative;
+}
+.Header_nav .left_area .button_setting:hover {
+  background-color: #15a4fa;
+}
+.Header_nav .left_area .button_setting:hover i {
+  color: #ffffff;
+}
+.Header_nav i {
+  font-size: 22px;
+  color: #aeb6c1;
+}
+.Header_nav input {
+  font-size: 22px;
+  font-family: serif;
+  color: #aeb6c1;
+}
+.Header_nav .button_setting {
+  width: 82px;
+}
+.Header_nav .button_setting button {
+  border-right: 1px solid #eeeff3;
+  width: 100%;
+}
+.Header_nav .to_left {
+  float: left;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  display: flex;
+}
+
+.Side_nave {
+  width: 200px;
+  position: absolute;
+  background: #354052;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.Side_nave .Header_Side {
+  padding-bottom: 20px;
+}
+.Side_nave .Header_Side .user_pic {
+  position: relative;
+  height: 130px;
+}
+.Side_nave .Header_Side .user_pic img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 80px;
+  min-width: 80px;
+  max-height: 80px;
+  min-height: 80px;
+  border-radius: 50%;
+}
+.Side_nave .Header_Side .user_info {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #a0acbf;
+  text-align: center;
+  width: 100%;
+}
+.Side_nave .Main_Said {
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.Side_nave .Main_Said .category_name {
+  color: #65748d;
+  font-size: 15px;
+  font-family: "Cairo", sans-serif;
+  padding-right: 14px;
+  margin: 5px 0 16px 0;
+  font-weight: 600;
+  cursor: context-menu;
+}
+.Side_nave .Main_Said .Label_Group {
+  display: flex;
+  height: 42px;
+  cursor: pointer;
+}
+.Side_nave .Main_Said .Label_Group .Label_Icon {
+  height: 24px;
+  width: 24px;
+  margin-right: 25px;
+  margin-top: 9px;
+}
+.Side_nave .Main_Said .Label_Group .Label_Icon i {
+  font-size: 24px;
+  color: #a0acbf;
+}
+.Side_nave .Main_Said .Label_Group .Label_Name {
+  color: #a0acbf;
+  font-size: 15px;
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  height: 24px;
+  margin-right: 10px;
+  margin-top: 9px;
+}
+.Side_nave .Main_Said .Label_Group:hover {
+  border-right: 5px solid #15a4fa;
+  background-color: #303949;
+}
+.Side_nave .Main_Said .Label_Group:hover .Label_Icon i {
+  color: #ffffff;
+}
+.Side_nave .Main_Said .Label_Group:hover .Label_Name {
+  color: #ffffff;
+}
+.Side_nave .border .top {
+  width: 100%;
+  height: 2px;
+  background-color: #293241;
+}
+.Side_nave .border .midle {
+  width: 100%;
+  height: 2px;
+  background-color: #303a4a;
+}
+.Side_nave .border .buttom {
+  width: 100%;
+  height: 2px;
+  background-color: #293241;
+}
+.Side_nave .border .light {
+  width: 100%;
+  height: 2px;
+  background-color: #3d495d;
+}
+
+.TeamArea {
+  width: 300px;
+  background-color: #ffffff;
+}
+.TeamArea .Header {
+  margin: 0 0;
+  height: 50px;
+  border-bottom: 2px solid #e1e7f0;
+}
+.TeamArea .Header .Navigation {
+  margin: 0 0;
+  padding: 12px 0 0;
+  color: #c4c5d4;
+}
+.TeamArea .Header .Navigation .Reduire {
+  cursor: pointer;
+}
+.TeamArea .Header .Navigation .Reduire:hover {
+  background-color: red;
+}
+.TeamArea .Header .Title_Area {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px 0 0;
+  color: #515974;
+}
+.TeamArea .Body .Item_Team {
+  height: 80px;
+  margin: 0 0;
+  cursor: pointer;
+}
+.TeamArea .Body .Item_Team:hover {
+  background-color: rgba(196, 197, 212, 0.2);
+}
+.TeamArea .Body .Item_Team .user_pic {
+  margin-top: 15px;
+}
+.TeamArea .Body .Item_Team .user_pic img {
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+}
+.TeamArea .Body .Item_Team .user_info {
+  margin-top: 22px;
+}
+.TeamArea .Body .Item_Team .user_info .user_name {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #515974;
+}
+.TeamArea .Body .Item_Team .user_info .user_role {
+  font-size: 14px;
+  font-weight: 100;
+  color: #c3c5d4;
+}
+
+._card {
+  background-color: #ffffff;
+  width: 100%;
+  height: auto;
+}
+._card .Header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: #6f7d95;
+  display: flex;
+  color: #f6f6f8;
+}
+._card .Header .Title_Area {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  font-family: "Cairo", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: context-menu;
+}
+._card .Header .Navigation {
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+._card .Header .Navigation .button {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+._card .Header .Navigation .button i {
+  margin-top: 5px;
+}
+._card .Header .Navigation .button:hover {
+  background-color: rgba(93, 76, 76, 0.4);
+}
+._card .Body {
+  background-color: #ffffff;
+  padding: 20px 15px 0 15px;
+}
+
+.table_users thead tr {
+  font-size: 14px;
+  font-weight: bold !important;
+  font-family: "Cairo", sans-serif;
+}
+.table_users tbody tr {
+  height: 50px;
+}
+.table_users .user_image {
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+}
+.table_users .user_image img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border: 2px solid #6f7d95;
+  position: absolute;
+  top: 7px;
+  bottom: 0;
+  left: 0;
+  right: 7px;
+}
+.table_users .btns_control {
+  min-width: 128px;
+}
+
+.content {
+  margin-top: 80px;
+  padding: 15px;
+}
+
+.hide_side {
+  right: -200px !important;
+  transition: right 0.6s ease;
+}
+
+.show_side {
+  right: 0 !important;
+  transition: right 0.6s ease;
+}
+
+.min_nav {
+  padding-right: 200px;
+  transition: padding-right 0.6s ease;
+}
+.min_nav .menu_button {
+  background-color: #15a4fa;
+}
+.min_nav .menu_button i {
+  color: #ffffff;
+}
+
+.full_nav {
+  padding-right: 0;
+  transition: padding-right 0.6s ease;
+}
+
+.min_content {
+  padding-right: 215px;
+  transition: padding-right 0.6s ease;
+}
+
+.full_content {
+  padding-right: 15px;
+  transition: padding-right 0.6s ease;
+}
+
+.vertical-center {
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+}
+
+._transparent {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none;
+}
+
+/*BootStrap elimination */
+._paddingLeft_right {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*# sourceMappingURL=production.css.map */
