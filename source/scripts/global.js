@@ -4,4 +4,5 @@ $(document).ready(function () {
        $('.Header_nav').toggleClass( "min_nav full_nav" );
        $('.content').toggleClass( "min_content full_content" );
    })
+    
 });
