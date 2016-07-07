@@ -8,7 +8,11 @@ html(lang='ar', dir='rtl')
         link(rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
         link(rel='stylesheet' href='../bower_components/font-awesome/css/font-awesome.min.css')
         link(rel='stylesheet' href='../bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.min.css')
+        link(rel='stylesheet' href='../bower_components/carbon/dist/carbon.min.css')
+        link(rel='stylesheet' href='../bower_components/carbon/demo/libs/json-tree/css/jsontree.css')
         link(rel='stylesheet' href='../public/css/production.css')
+
+        script(type='text/javascript', src='../bower_components/carbon/demo/libs/json-tree/jsontree.js')
 
         // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
         // WARNING: Respond.js doesn't work if you view the page via file:
@@ -17,14 +21,12 @@ html(lang='ar', dir='rtl')
         //<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         //<![endif]
     body
-        hello
-        .container-fluid
-            include Parts/nave_bare.jade
-            include Parts/side_bare.jade
-            .content.full_content
-                //include Parts/Team.jade
-                //include Parts/users_table.jade
-                include Parts/articles_table.jade
 
+        div#container
+            div#my-editor
+
+        script(type='text/javascript', src='../bower_components/carbon/demo/libs/webcamjs/webcam.js')
+        script(type='text/javascript', src='https://apis.google.com/js/client.js')
+        script(type='text/javascript', src='../bower_components/carbon/demo/assets/gcs.js')
+        script(type='text/javascript', src='../bower_components/carbon/dist/carbon.min.js')
         script(type='text/javascript', src='../public/js/production.min.js')
-

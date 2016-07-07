@@ -3,7 +3,9 @@ div._card
         div.Title_Area جدول الأعضاء
         div.Navigation
             div.button.Reduire
-                i(class="fa fa-minus" aria-hidden="true")
+                i(class="fa fa-compress" aria-hidden="true")
+            div.button.Agrendire.hidden
+                i(class="fa fa-expand" aria-hidden="true")
             div.button.Exit
                 i(class="fa fa-times" aria-hidden="true")
     div.Body
@@ -11,7 +13,7 @@ div._card
             table.table.table-bordered.table-hover.table_users
                 thead
                     tr
-                    each val in ['#','', 'إسم المستخدم', 'البريد', 'الإسم الشخصي', 'التحكم']
+                    each val in ['#','', 'إسم المستخدم', 'البريد', 'الإسم الشخصي', 'التحكم','معلومات']
                         th= val
                 tbody
                     -for(var i = 0; i<5 ; i++)
@@ -27,3 +29,7 @@ div._card
                                     button.btn.btn-success التعديل
                                     button.btn.btn-warning حظر
                                     button.btn.btn-danger حذف
+                            th
+                                div.btns_control.btn-group.btn-group-sm(role="group")
+                                    button.btn.btn-success مشاهدة اللحساب
+                                    button.btn.btn-default إحصائيات الحساب

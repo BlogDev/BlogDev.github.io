@@ -55,7 +55,8 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    'public/index.html': 'source/jade/index.jade'
+                    'public/index.html': 'source/jade/index.jade',
+                    'public/create.html': 'source/jade/CreateArticle.jade'
                 }
             }
         },
