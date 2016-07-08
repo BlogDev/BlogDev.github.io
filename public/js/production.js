@@ -12210,49 +12210,5 @@ $(document).ready(function () {
     });
     //End Card Controlle :
 
-    demoArticle = new carbon.Article({
-        sections: [new carbon.Section({
-            components: [
-                new carbon.Layout({
-                    components: [
-                        new carbon.Paragraph({
-                            placeholderText: 'كاربون',
-                            text: 'مرحباً بك في المحرر',
-                            paragraphType: carbon.Paragraph.Types.MainHeader
-                        }),
-                        new carbon.Paragraph({
-                            placeholderText: 'This is just a demo.',
-                            text: 'محرر مقالات في المتصفح',
-                            paragraphType: carbon.Paragraph.Types.ThirdHeader
-                        })
-                    ]
-                })
-            ]
-        })]
-    });
-
-    var editor = new carbon.Editor(document.getElementById('my-editor'),{
-            rtl: true,
-            locale: 'ar',
-            article: demoArticle,
-            modules: [
-                carbon.GiphyComponent,
-                carbon.EmbeddedComponent
-            ]
-        });
-    editor.install(carbon.EmbeddingExtension, {
-        embedProviders: {
-            embedly: new carbon.EmbedlyProvider({
-                apiKey: '46c6ad376b1343359d774c5d8a940db7'
-            }),
-            carbon: new carbon.CarbonEmbedProvider({
-            })
-        },
-        ComponentClass: carbon.EmbeddedComponent
-    });
-    editor.install(carbon.SelfieExtension);
-    editor.install(carbon.LayoutingExtension);
-
-
-    editor.render();
+   
 });

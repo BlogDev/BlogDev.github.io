@@ -16,8 +16,6 @@
     "bootstrap": "^3.3.6",
     "bootstrap-material-design": "^0.5.10",
     "font-awesome": "fontawesome#^4.6.3",
-    "bootstrap-rtl": "^3.4.0",
-    "carbon": "manshar/carbon",
-    "webcamjs": "^1.0.9"
+    "bootstrap-rtl": "^3.4.0"
   }
 }

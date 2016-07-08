@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
+        // Compile JS (Jquiry/bootstrap/global)
         concat: {
             dist: {
                 src: [
@@ -18,7 +19,7 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap/dist/js/bootstrap.js',
                     'source/scripts/global.js'
                 ],
-                dest: 'public/js/production.js'
+                dest: 'public/js/production.js' // File Production
             }
         },
         uglify: {
