@@ -32,6 +32,22 @@
   display: block;
 }
 
+.no-padding {
+  padding: 0 !important;
+}
+
+.bg-green {
+  background-color: #a0d468 !important;
+}
+
+.bg-yellow {
+  background-color: #ffce55 !important;
+}
+
+.bg-red {
+  background-color: #ed4e2a !important;
+}
+
 body {
   background-color: #ecf2f6;
 }
@@ -198,61 +214,35 @@ body {
   background-color: #3d495d;
 }
 
-.TeamArea {
-  width: 300px;
-  background-color: #ffffff;
-}
-.TeamArea .Header {
-  margin: 0 0;
-  height: 50px;
-  border-bottom: 2px solid #e1e7f0;
-}
-.TeamArea .Header .Navigation {
-  margin: 0 0;
-  padding: 12px 0 0;
-  color: #c4c5d4;
-}
-.TeamArea .Header .Navigation .Reduire {
-  cursor: pointer;
-}
-.TeamArea .Header .Navigation .Reduire:hover {
-  background-color: red;
-}
-.TeamArea .Header .Title_Area {
-  font-size: 16px;
-  font-weight: 600;
-  padding: 12px 20px 0 0;
-  color: #515974;
-}
-.TeamArea .Body .Item_Team {
+.Item_Team {
   height: 80px;
   margin: 0 0;
   cursor: pointer;
 }
-.TeamArea .Body .Item_Team:hover {
+.Item_Team:hover {
   background-color: rgba(196, 197, 212, 0.2);
 }
-.TeamArea .Body .Item_Team .user_pic {
+.Item_Team .user_pic {
   margin-top: 15px;
 }
-.TeamArea .Body .Item_Team .user_pic img {
+.Item_Team .user_pic img {
   max-height: 50px;
   max-width: 50px;
   min-height: 50px;
   min-width: 50px;
   border-radius: 50%;
 }
-.TeamArea .Body .Item_Team .user_info {
+.Item_Team .user_info {
   margin-top: 22px;
 }
-.TeamArea .Body .Item_Team .user_info .user_name {
+.Item_Team .user_info .user_name {
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-weight: 600;
   color: #515974;
 }
-.TeamArea .Body .Item_Team .user_info .user_role {
+.Item_Team .user_info .user_role {
   font-size: 14px;
   font-weight: 100;
   color: #c3c5d4;
@@ -275,28 +265,36 @@ body {
 ._card .Header .Title_Area {
   position: absolute;
   right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   bottom: 0;
-  font-family: "Cairo", sans-serif;
-  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Droid Arabic Naskh", serif;
+  font-size: 13px;
   font-weight: 600;
   cursor: context-menu;
 }
+._card .Header .Title_Area span {
+  font-size: 11px;
+  color: #d1d5de;
+  margin-right: 7px;
+}
 ._card .Header .Navigation {
   position: absolute;
-  left: 20px;
+  left: 2px;
   bottom: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 ._card .Header .Navigation .button {
   width: 24px;
   height: 24px;
   text-align: center;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 2px;
 }
 ._card .Header .Navigation .button i {
   margin-top: 5px;
@@ -304,9 +302,12 @@ body {
 ._card .Header .Navigation .button:hover {
   background-color: rgba(93, 76, 76, 0.4);
 }
+._card .card_body_padding {
+  padding: 12px;
+}
 ._card .Body {
   background-color: #ffffff;
-  padding: 20px 15px 0 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.02);
 }
 
 .table_users thead tr {
@@ -395,6 +396,171 @@ body {
   display: block;
   border-radius: 0;
   font-size: 11px;
+}
+
+.article_item {
+  position: relative;
+  padding: 7px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: "Droid Arabic Naskh", serif;
+}
+.article_item .left_area .article_title {
+  font-size: 13px;
+  color: #777777;
+}
+.article_item .left_area .date_pub {
+  font-size: 10px;
+  margin-top: 4px;
+  margin-right: 6px;
+  color: #999999;
+}
+.article_item .left_area .date_pub i {
+  margin-left: 6px;
+}
+.article_item .right_area {
+  position: relative;
+  min-height: 50px;
+}
+.article_item .right_area .controller_in_review {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #77777b;
+  font-size: 10px;
+  font-weight: 600;
+}
+.article_item .show_article {
+  position: absolute;
+  left: -12px;
+  -lh-property: 0;
+  top: -webkit-calc(50% - 13px);
+  top: -moz-calc(50% - 13px);
+  top: calc(50% - 13px);
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 3px solid #fff;
+  vertical-align: middle;
+  color: #2dc3e8;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+.article_item .show_article i {
+  font-size: 12px;
+  margin-top: 4.2px;
+}
+
+.notif_main .notif_container {
+  position: relative;
+  padding: 25px 25px;
+  background-color: #f5f5f5;
+}
+.notif_main .notif_container .notification_list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  font-family: "Droid Arabic Naskh", serif;
+}
+.notif_main .notif_container .notification_list .notification_item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 3px;
+  background-clip: padding-box;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  vertical-align: top;
+}
+.notif_main .notif_container .notification_list .notification_item .divider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 1px;
+  background-color: #eee;
+  display: inline-block;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_user {
+  height: 50px;
+  padding: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_user img {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_user .user_name {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #969393;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_user .whats_doing {
+  margin-right: 5px;
+  color: #777676;
+  font-size: 13px;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_user .whats_effect {
+  margin-right: 5px;
+  color: #777676;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_time {
+  line-height: 30px;
+  height: 50px;
+  padding: 10px;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_time i {
+  color: #ccc;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_time .time {
+  color: #999;
+  font-size: 11px;
+  margin-right: 5px;
+  text-transform: uppercase;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_type {
+  line-height: 30px;
+  height: 50px;
+  padding: 10px;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_type .type {
+  color: #999;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_state {
+  position: absolute;
+  top: 13px;
+  left: -12px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: #e5e5e5;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  border: 2px solid #fff;
+}
+.notif_main .notif_container .notification_list .notification_item .notification_state i {
+  font-size: 13px;
+  color: #fff;
+  line-height: 20px;
 }
 
 .content {

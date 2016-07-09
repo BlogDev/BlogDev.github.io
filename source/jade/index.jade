@@ -18,14 +18,28 @@ html(lang='ar', dir='rtl')
         //<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         //<![endif]
     body
-        hello
-        .container-fluid
+        div.container-fluid
             include Parts/nave_bare.jade
             include Parts/side_bare.jade
-            .content.full_content
-                include Parts/Team.jade
-                include Parts/users_table.jade
-                include Parts/articles_table.jade
+            div.content.full_content
+                div.row
+                    div.col-md-8
+                        include Parts/notifications_table.jade
+                //div.row
+                    div.col-md-4
+                        include Parts/articles_states.jade
+                    div.col-md-3
+                        include Parts/latest_postes_under_review.jade
+                //div.row
+                    div.col-md-3
+                        include Parts/Team.jade
+                //div.row
+                    div.col-md-12
+                        include Parts/users_table.jade
+                //div.row
+                    div.col-md-12
+                        include Parts/articles_table.jade
 
+        script(type='text/javascript', src='../bower_components/Chart.js/dist/Chart.js')
         script(type='text/javascript', src='../public/js/production.min.js')
 

@@ -13,36 +13,44 @@
     .Title_Area
       position: absolute
       right: 20px
-      top: 50%
-      transform: translateY(-50%)
+      top: 0
       bottom: 0
-      font-family: 'Cairo', sans-serif
-      font-size: 18px
+      display: flex
+      justify-content: center
+      align-items: center
+      font-family: 'Droid Arabic Naskh', serif
+      font-size: 13px
       font-weight: 600
       cursor: context-menu
+      span
+        font-size: 11px
+        color: #d1d5de
+        margin-right: 7px
     .Navigation
       position: absolute
-      left: 20px
+      left: 2px
       bottom: 0
-      top: 50%
-      transform: translateY(-50%)
+      top: 0
       display: flex
+      justify-content: center
+      align-items: center
       .button
         width: 24px
         height: 24px
         text-align: center
         cursor: pointer
-        margin-left: 10px
+        margin-left: 2px
         i
           margin-top: 5px
 
         &:hover
           background-color: rgba(93, 76, 76, 0.4)
 
-
+  .card_body_padding
+    padding: 12px
   .Body
     background-color: #ffffff
-    padding: 20px 15px 0 15px
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.02)
 
 
 .table_users
