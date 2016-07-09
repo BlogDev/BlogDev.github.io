@@ -12210,5 +12210,38 @@ $(document).ready(function () {
     });
     //End Card Controlle :
 
+    //ChartJs Start
+    var ctx = $("#ArticleViews");
+    var data = {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+            {
+                label: "عدد الزيارات",
+                backgroundColor: "rgba(255,99,132,0)",
+                borderColor: "rgba(111, 125, 149,1)",
+                borderWidth: 1,
+                hoverBackgroundColor: "rgba(255,99,132,0.4)",
+                hoverBorderColor: "rgba(255,99,132,1)",
+                data: [150, 55, 90, 111, 83, 400, 320]
+            }
+        ]
+    };
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            },
+            responsive : true
+        }
+    });
+    //ChartJs End
+
    
 });

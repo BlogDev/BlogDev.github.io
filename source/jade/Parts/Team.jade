@@ -1,12 +1,13 @@
-div.TeamArea.Test
-    div.Header.row
-        div.col-md-9.Title_Area فريق العمل
-        div.col-md-3.Navigation.row
-            div.Reduire.col-md-6
-                i(class="fa fa-minus" aria-hidden="true")
-            div.Exit.col-md-6
+div._card
+    div.Header
+        div.Title_Area جدول الأعضاء
+        div.Navigation
+            div.button.Reduire
+                i(class="fa fa-compress" aria-hidden="true")
+            div.button.Agrendire.hidden
+                i(class="fa fa-expand" aria-hidden="true")
+            div.button.Exit
                 i(class="fa fa-times" aria-hidden="true")
-
     div.Body
         -for( var x = 0 ; x < 3; x++)
             div.Item_Team.row
