@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-pug');
+    grunt.loadNpmTasks('grunt-css');
 
     //noinspection JSUnresolvedFunction
     grunt.initConfig({
@@ -29,6 +30,17 @@ module.exports = function(grunt) {
                     'source/scripts/carbon.js'
                 ],
                 dest: 'public/js/textEditor.js' // File Production
+            },
+            css: {
+                src: [
+                    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+                    'bower_components/font-awesome/css/font-awesome.min.css',
+                    'bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.min.css',
+                    'public/css/production.css',
+                    'public/css/jsonTree.css',
+                    'public/css/textEditor.css'
+                ],
+                dest: 'public/css/global.css'
             }
         },
         uglify: {
@@ -51,6 +63,12 @@ module.exports = function(grunt) {
                     'public/css/textEditor.css' : 'source/sass/carbon.sass',
                     'public/css/jsonTree.css' : 'source/sass/jsontree.sass'
                 }
+            }
+        },
+        cssmin: {
+            css:{
+                src: 'public/css/global.css',
+                dest: 'public/css/global.min.css'
             }
         },
         imagemin: {
