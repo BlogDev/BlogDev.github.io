@@ -5,10 +5,7 @@ html(lang='ar', dir='rtl')
         title Web Admin Design
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(rel='stylesheet' href='../bower_components/bootstrap/dist/css/bootstrap.min.css')
-        link(rel='stylesheet' href='../bower_components/font-awesome/css/font-awesome.min.css')
-        link(rel='stylesheet' href='../bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.min.css')
-        link(rel='stylesheet' href='../public/css/production.css')
+        link(rel='stylesheet' href='../public/css/global.css')
 
 
         // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
@@ -24,15 +21,20 @@ html(lang='ar', dir='rtl')
             div.content.full_content
                 div.row
                     div.col-md-8
-                        include Parts/notifications_table.jade
+                        include Parts/text_editor.jade
+                    div.col-md-4
+                        include Parts/article_view.jade
                 //div.row
+                    div.col-md-8
+                        include Parts/notifications_table.jade
                     div.col-md-4
                         include Parts/articles_states.jade
-                    div.col-md-3
-                        include Parts/latest_postes_under_review.jade
                 //div.row
                     div.col-md-3
+                        include Parts/latest_postes_under_review.jade
+                    div.col-md-3
                         include Parts/Team.jade
+
                 //div.row
                     div.col-md-12
                         include Parts/users_table.jade
@@ -40,6 +42,8 @@ html(lang='ar', dir='rtl')
                     div.col-md-12
                         include Parts/articles_table.jade
 
+        script(type='text/javascript', src='https://www.gstatic.com/firebasejs/3.1.0/firebase.js')
         script(type='text/javascript', src='../bower_components/Chart.js/dist/Chart.js')
         script(type='text/javascript', src='../public/js/production.min.js')
+        script(type='text/javascript', src='../public/js/textEditor.min.js')
 

@@ -1,0 +1,324 @@
+/**
+ * Main Styles for Carbon.
+
+.carbon
+  outline: none
+  font-family: "Droid Arabic Naskh", serif
+  font-size: 14px
+  h1
+    margin: 0
+  p
+    line-height: 2
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+    text-align: justify
+    margin: 30px 16px
+  figcaption.empty-paragraph
+    display: none
+
+.carbon-editor, [contenteditable]
+  outline: none
+
+.carbon-editor .carbon [placeholder].show-placeholder:after
+  content: attr(placeholder)
+  cursor: text
+  display: inline
+  /* For Firefox
+  color: #c0c0c0
+
+.carbon
+  .layout-single-column, .layout-float-left, .layout-float-right
+    max-width: 600px
+    margin: 0 auto
+  .layout-bleed
+    max-width: 800px
+    margin: 0 auto
+  .layout-stage
+    width: 100%
+  .layout-float-left figure
+    float: left
+    margin: 0
+    margin-right: 2em
+    width: 300px
+  .layout-float-right figure
+    float: right
+    margin: 0
+    margin-left: 2em
+    width: 300px
+  figure
+    margin: 2em 0
+    text-align: center
+    /* To fix the position of toolbar when div is floated
+    display: inline-block
+    width: 100%
+    .image-container
+      position: relative
+      height: 0
+      overflow: hidden
+      img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    img
+      max-width: 100%
+      height: auto
+    .selection-pointer
+      width: 0
+      height: 0
+      content: ' '
+      z-index: -1
+      outline: none
+      line-height: 0
+    figcaption
+      color: #ccc
+      font-style: italic
+      font-size: 0.8em
+      outline: none
+      padding: 0.5em 0
+    .inner-container
+      position: relative
+      display: inline-block
+      width: 100%
+    .ratio-container
+      height: 0
+    .embed-container
+      position: relative
+      margin: 0 auto
+      overflow: hidden
+    .embed-overlay
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+    .ratio-container
+      iframe, object, embed
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+    .embed-overlay
+      z-index: 9
+    &.editor-selected .embed-overlay
+      display: none
+    iframe
+      display: inline-block !important
+    .noembed-embed .noembed-wrapper
+      box-shadow: 0 1px 5px -2px #333
+    .noembed-gist h3
+      background: #DDDDDD
+      margin: 0
+      padding: 0.1em 0 1em
+    .noembed-embed
+      .gist-file
+        box-shadow: 0 1px 5px -2px #333
+        padding: 1em
+        font-size: 0.55em
+        text-align: left
+        background-color: #f5f5f5
+      .gist-description
+        font-size: 0.9em
+        text-align: center
+        padding: 1em
+        background: #ddd
+        color: #333
+        line-height: 1.4
+        margin: 0
+      .noembed-meta-info
+        text-align: center
+        width: 100%
+        background: #ddd
+        font-size: 0.7em
+        box-shadow: 0 1px 5px -1px #333
+      a
+        color: #333
+      img
+        border: none !important
+    &.editor-selected .noembed-embed img
+      border: none !important
+
+.carbon-editor .carbon figure
+  img, .inner-container
+    box-sizing: border-box
+    border: 3px solid transparent !important
+  &.editor-selected
+    img, .inner-container
+      border: 3px solid #FF5722 !important
+
+#carbon-off-screen
+  position: absolute
+  left: -99999px
+  top: -99999px
+
+@media (max-width: 500px)
+  .carbon
+    .layout-float-left figure
+      float: none
+      margin-right: auto
+      width: auto
+    .layout-float-right figure
+      float: none
+      margin-left: 2em
+      width: auto
+
+/**
+ * Styling for carbon toolbars.
+
+.editor-toolbar
+  position: absolute
+  top: -99999px
+  left: -99999px
+  z-index: 999
+  font-size: 18px
+  &.rtl
+    direction: rtl
+  .extra-fields
+    display: none
+    &.active
+      display: block
+      background-color: #2196F3
+    input
+      background-color: transparent
+      border: none
+      padding: 12px
+      font-size: 0.7em
+      color: #fff
+      outline: none
+      width: 100%
+      &::-webkit-input-placeholder
+        color: rgba(255, 255, 255, 0.8)
+
+.buttons-fields-container
+  position: relative
+
+.extra-fields-container
+  position: absolute
+  top: -40px
+  width: 100%
+
+.editor-toolbar-buttons
+  margin: 0
+  padding: 0
+  font-family: serif
+
+.editor-inline-toolbar .editor-toolbar-buttons:after, .layouting-toolbar .editor-toolbar-buttons:after
+  content: ""
+  position: absolute
+  width: 0
+  height: 0
+  border-width: 5px
+  border-style: solid
+  border-color: #FF5722 transparent transparent transparent
+  bottom: -10px
+  left: 45%
+
+.editor-block-toolbar
+  .editor-toolbar-buttons
+    margin-top: -30px
+  .buttons-fields-container
+    box-shadow: 0 1px 3px -3px
+
+.editor-toolbar-buttons
+  button
+    border: 0
+  .button-container
+    display: inline-block
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    &.hidden
+      display: none
+
+.editor-toolbar button
+  outline: none
+  user-select: none
+
+.editor-inline-toolbar .editor-toolbar-buttons button
+  background-color: #FF5722
+  color: #fff
+  padding: 0.5em 0.8em
+  width: 2.5em
+  font-size: 0.9em
+
+.layouting-toolbar .editor-toolbar-buttons button
+  background-color: #FF5722
+  color: #fff
+  padding: 0.5em 0.8em
+  width: 2.5em
+  font-size: 0.9em
+  width: auto
+  span
+    display: none
+
+.editor-block-toolbar .editor-toolbar-buttons button
+  background-color: #fafafa
+  color: #ccc
+  padding: 0.3em 0.5em
+  width: 2em
+  font-size: 0.6em
+
+.editor-toolbar-buttons button:hover
+  background-color: #BF360C
+  color: #fff
+
+.editor-block-toolbar
+  .editor-toolbar-buttons button:focus
+    outline: none
+  .button-container.active button
+    color: #2196F3
+
+.editor-inline-toolbar .button-container.active button, .layouting-toolbar .button-container.active button
+  background-color: #2196F3
+  color: #fff
+
+.toolbelt-toolbar
+  max-width: 330px
+  display: flex
+  flex-wrap: wrap
+  .editor-toolbar-buttons
+    display: flex
+    text-align: left
+    flex-wrap: wrap
+    box-shadow: 0 1px 5px -3px
+  .upload-button
+    button
+      background: transparent
+    &:hover button
+      background-color: #BF360C
+      color: #fff
+    input
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      width: 100%
+      opacity: 0
+      cursor: pointer
+  .button-container
+    position: relative
+    font-size: 0.8em
+    flex-grow: 1
+    background: #FAFAFA
+    color: #000
+    text-align: left
+    cursor: pointer
+    width: 160px
+    border-bottom: 1px solid #f5f5f5
+    border-right: 1px solid #f5f5f5
+  button
+    background: none
+    color: #757575
+    font-size: 0.8em
+    padding: 1.2em 1em
+    width: 100%
+    text-align: left
+  &.rtl button
+    text-align: right
+  button i
+    padding: 0 5px

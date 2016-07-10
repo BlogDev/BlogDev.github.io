@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-pug');
+    grunt.loadNpmTasks('grunt-css');
 
     //noinspection JSUnresolvedFunction
     grunt.initConfig({
@@ -17,15 +18,39 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.js',
+                    'source/scripts/Functions.js',
                     'source/scripts/global.js'
                 ],
                 dest: 'public/js/production.js' // File Production
+            },
+            carbon : {
+                src: [
+                    'source/scripts/webcam.js',
+                    'source/scripts/jsontree.js',
+                    'source/scripts/carbon.js'
+                ],
+                dest: 'public/js/textEditor.js' // File Production
+            },
+            css: {
+                src: [
+                    'bower_components/bootstrap/dist/css/bootstrap.min.css',
+                    'bower_components/font-awesome/css/font-awesome.min.css',
+                    'bower_components/bootstrap-rtl/dist/css/bootstrap-rtl.min.css',
+                    'public/css/production.css',
+                    'public/css/jsonTree.css',
+                    'public/css/textEditor.css'
+                ],
+                dest: 'public/css/global.css'
             }
         },
         uglify: {
             build: {
                 src: 'public/js/production.js',
                 dest: 'public/js/production.min.js'
+            },
+            carbon : {
+                src: 'public/js/textEditor.js',
+                dest: 'public/js/textEditor.min.js'
             }
         },
         sass: {
@@ -34,8 +59,16 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'public/css/production.css': 'source/sass/global.sass'
+                    'public/css/production.css': 'source/sass/global.sass',
+                    'public/css/textEditor.css' : 'source/sass/carbon.sass',
+                    'public/css/jsonTree.css' : 'source/sass/jsontree.sass'
                 }
+            }
+        },
+        cssmin: {
+            css:{
+                src: 'public/css/global.css',
+                dest: 'public/css/global.min.css'
             }
         },
         imagemin: {
