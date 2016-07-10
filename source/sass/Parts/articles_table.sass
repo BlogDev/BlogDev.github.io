@@ -1,17 +1,28 @@
+$table_header_font_family : 'Droid Arabic Naskh Cairo', sans-serif
+$table_max_font_size : 16px
+$table_header_font_weight : 500
+$table_header_text_align : center
+
+$table_body_font_family : 'Droid Arabic Naskh', serif
+$table_body_text_align : center
+$table_body_text_vertical_align : middle
+
+
 .table_articles
   thead
     th
-      text-align: center
-      font-size: 16px
-      font-weight: 800
-      font-family: 'Cairo', sans-serif
+      text-align: $table_header_text_align
+      font-size: $table_max_font_size
+      font-weight: $table_header_font_weight
+      font-family: $table_header_font_family
     .articleControlle
       width: 100px
+
   tbody
-    font-family: 'Droid Arabic Naskh', serif
+    font-family: $table_body_font_family
     td
-      text-align: center
-      vertical-align: middle !important
+      text-align: $table_body_text_align
+      vertical-align: $table_body_text_vertical_align !important
     .articleTitle
       width: 200px
       font-size: 14px
@@ -19,13 +30,13 @@
         width: 100%
         padding: 0 10px
         text-align: justify
-        font-size: 14px
+        font-size: $table_max_font_size - 2px
         margin: 0
         line-height: 1.6
         font-weight: 100
     .articleDesc
       width: 300px
-      font-size: 12px
+      font-size: $table_max_font_size - 4px
       p
         width: 100%
         padding: 0 10px
@@ -35,12 +46,11 @@
 
     .articleTag
       width: 80px
-      font-size: 14px
-    //.articleStatu
+      font-size: $table_max_font_size - 2px
     .articleControlle
       width: 100%
       display: block
-      font-size: 12px
+      font-size: $table_max_font_size - 5px
       button
         height: 24px
         width: 100% !important
@@ -49,4 +59,4 @@
         border: 0
         display: block
         border-radius: 0
-        font-size: 11px
+        font-size: $table_max_font_size - 5px

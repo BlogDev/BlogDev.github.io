@@ -17,15 +17,28 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.js',
+                    'source/scripts/Functions.js',
                     'source/scripts/global.js'
                 ],
                 dest: 'public/js/production.js' // File Production
+            },
+            carbon : {
+                src: [
+                    'source/scripts/webcam.js',
+                    'source/scripts/jsontree.js',
+                    'source/scripts/carbon.js'
+                ],
+                dest: 'public/js/textEditor.js' // File Production
             }
         },
         uglify: {
             build: {
                 src: 'public/js/production.js',
                 dest: 'public/js/production.min.js'
+            },
+            carbon : {
+                src: 'public/js/textEditor.js',
+                dest: 'public/js/textEditor.min.js'
             }
         },
         sass: {
@@ -34,7 +47,9 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'public/css/production.css': 'source/sass/global.sass'
+                    'public/css/production.css': 'source/sass/global.sass',
+                    'public/css/textEditor.css' : 'source/sass/carbon.sass',
+                    'public/css/jsonTree.css' : 'source/sass/jsontree.sass'
                 }
             }
         },
