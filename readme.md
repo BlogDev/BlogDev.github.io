@@ -1,14 +1,14 @@
-_install **node server** :_
-`from : nodejs.org`
+####_install **node server** :_
+    -from : nodejs.org
 ---
-_install **bower** global :_
-`npm install -g bower`
+####_install **bower** global :_
+    - npm install -g bower
 ---
-_Install **Node** Packages :_
- `npm install`
+####_Install **Node** Packages :_
+    - npm install
 --- 
-_Install **Bower** Packages :_
- `bower install`
+####_Install **Bower** Packages :_
+    -bower install
 --- 
  
  
