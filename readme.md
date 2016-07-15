@@ -4,12 +4,6 @@
 ####_install **bower** global :_
     - npm install -g bower
 ---
-####_Install **Node** Packages :_
-    - npm install
---- 
-####_Install **Bower** Packages :_
-    -bower install
---- 
  
  
 ####_Install Sass :_
@@ -29,5 +23,13 @@
     - for windows : npm install -g grunt-cli
     - for linux   : sudo npm install -g grunt-cli
 ---    
+
+######_(now open terminal in project master folder :)_
+####_Install **Node** Packages :_
+    - npm install
+--- 
+####_Install **Bower** Packages :_
+    -bower install
+--- 
 ####_Run Scripts :_    
     grunt watch
